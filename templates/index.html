@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Review Sentiment Analysis</title>
+</head>
+<body>
+    <h1>Welcome to Product Review Sentiment Analysis</h1>
+    <form method="POST" action="/">
+        {{ form.csrf_token }}
+        {{ form.review.label }} {{ form.review(size=50) }} {{ form.submit }}
+    </form>
+    {% if result %}
+        <h3>{{ result }}</h3>
+    {% endif %}
+</body>
+</html>
